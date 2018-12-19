@@ -8,10 +8,67 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
     <title>Top</title>
+    <link href="~/Contect/sharestyle.css" rel="stylesheet" />
+    <style type="text/css">
+        .hightCss{
+            color:yellow;
+        }
+    </style>
 </head>
 <body>
-    <div> 
+    <div class="index_header">
+        <div class="index_headertop">
+            <div class="index_logo">
+                <a href="#"><img src="/images/index_logo.png"></a>
+            </div>
+            <div class="lgstatus">
+                欢迎您,@ViewBag.UserName<i><em>20</em></i>可用余额：<span>￥@ViewBag.AvailableBalance</span>&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="在线充值" class="btsty2" />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="index_headerbot">
+            <div class="nav_list">
+                <ul>
+                    <li>
+                        <a href="#">业务管理</a>
+                        <div class="nav_out" style="display:none">
+                            <i></i>
+                            <p><a href="#">订单管理</a></p>
+                            <p><a href="#">提单管理</a></p>
+                            <p><a href="#">身份证管理</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#">财务管理</a>
+                        <div class="nav_out" style="display:none">
+                            <i></i>
+                            <p><a href="#">财务流水</a></p>
+                            <p><a href="#">提单对账</a></p>
+                            <p><a href="#">运单对账</a></p>
+                            <p><a href="#">异常费用对账</a></p>
+                            <p><a href="#">充值记录</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">系统管理</a>
+                        <div class="nav_out">
+                            <i></i>
+                            <p><a href="#">基本信息管理</a></p>
+                            <p><a href="#">认证管理</a></p>
+                            <p><a href="#">修改密码</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fucnbx">
+                <span><a href="#"><i class="i1Channel"></i>运单打印客户端下载</a></span>
+                <span><a href="#"><i class="i2"></i>API文档</a></span>
+                <span><a href="#"><i class="i3"></i>退出</a></span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
