@@ -5,13 +5,79 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh-cn">
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
     <title>Left</title>
+    <link href="~/Content/sharestyle.css" rel="stykesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <style type="text/css">
+        body{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
 </head>
 <body>
-    <div> 
+    <div class="leftbar" id="divOrder">
+        <dl>
+           <dt class="head2" id="dt_ulOrder" Onclick="ShowMenuList('ulOrder')">订单管理</dt>
+            <ul class="box_n" id="ulOrder">
+                <li><a href="#">批量新建订单</a></li>
+                <li><a href="#">手工新建订单</a></li>
+                <li><a class="nav_sub" href="#">订单草稿<span>(3)</span></a></li>
+                <li><a href="#">已确认订单<span>(3)</span></a></li>
+                <li><a href="#">待发货订单<span>(3)</span></a></li>
+                <li><a href="#">已发货订单<span> (0) </span></a></li>
+                <li><a href="#">订单回收站<span> (0) </span></a></li>
+                <li><a href="#">退件<span>(0)</span></a></li>
+                <li><a href="#">批量修改订单</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt class="head1" id="dt_ulLading" onclick="ShowMenuList('ulLading')">提单管理</dt>
+            <ul class="box_n" id="ulLading" style="display:none">
+                <li><a href="#">创建托盘</a></li>
+                <li><a href="#">未交货托盘<span> (6) </span></a></li>
+                <li><a href="#">已交货托盘</a></li>
+                <li><a href="#">创建交货单</a></li>
+                <li><a href="#">交货单列表</a></li>
+                <li><a href="#">待预扣提单</a><span> (3) </span></li>
+                <li><a href="#">已预扣提单</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt class="head1" id="dt_ulIdentityCard" onclick="ShowMenuList('ulIdentityCard')">身份证管理</dt>
+            <ul class="box_n" id="ulIdentityCard" style="display:none;">
+                <li><a href="#">待验证身份证<span> (3) </span></a></li>
+                <li><a href="#">无需验证身份证<span>（3）</span></a></li>
+                <li><a href="#">已验证身份证<span> (3) </span></a></li>
+            </ul>
+        </dl>
     </div>
+    <div class="leftbar" id="divSysManage"></div>
+    <div class="leftbar" id="divFinancial">
+        <dl>
+            <dt class="head2" id="dt_ulChannel" onclick="ShowMenuList('ulChannel')">渠道管理费用</dt>
+            <ul class="box_n" id="ulChannel">
+                <li><a href="#" onclick="goNewPage('a.html', '渠道分类');">渠道分类</a></li>
+                <li><a target="mainFrame" id="ChannelManage" onclick="goNewPage('/Channel/Index','渠道管理')">渠道管理</a></li>
+                <li><a href="#">分区管理</a></li>
+                <li><a href="#">价格管理</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt class="head1" id="dt_ulFinancial" onclick="ShowMenuList('ulFinancial')">财务管理</dt>
+            <ul class="box_n" id="ulFinancial" style="display:none;">
+                <li><a href="#">财务流水</a></li>
+                <li><a href="#">提单对账</a></li>
+                <li><a href="#">运单对账</a></li>
+                <li><a href="#">异常费用对账</a></li>
+                <li><a href="#">充值记录</a></li>
+            </ul>
+        </dl>
+    </div>
+
 </body>
 </html>
