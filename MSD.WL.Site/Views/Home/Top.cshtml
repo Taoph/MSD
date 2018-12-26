@@ -10,18 +10,24 @@
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
     <title>Top</title>
-    <link href="~/Contect/sharestyle.css" rel="stylesheet" />
+    <link href="~/Content/sharestyle.css" rel="stylesheet" />
     <style type="text/css">
-        .hightCss{
-            color:yellow;
+        .hightCss {
+            color: yellow;
         }
     </style>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        function showLeftList(divID) {
+
+        }
+    </script>
 </head>
 <body>
     <div class="index_header">
         <div class="index_headertop">
             <div class="index_logo">
-                <a href="#"><img src="/images/index_logo.png"></a>
+                <a href="#"><img src="/images/index_logo.png" alt="Logo"></a>
             </div>
             <div class="lgstatus">
                 欢迎您,@ViewBag.UserName<i><em>20</em></i>可用余额：<span>￥@ViewBag.AvailableBalance</span>&nbsp;&nbsp;&nbsp;
@@ -34,7 +40,7 @@
                 <ul>
                     <li>
                         <a href="#">业务管理</a>
-                        <div class="nav_out" style="display:none">
+                        <div class="nav_out" style="display:none;">
                             <i></i>
                             <p><a href="#">订单管理</a></p>
                             <p><a href="#">提单管理</a></p>
