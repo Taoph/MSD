@@ -18,6 +18,37 @@
             padding:0px;
         }
     </style>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        function ShowMenuList(id) {
+            var objectobj = document.getElementById(id);
+            var dtObj = document.getElementById("dt_" + id);
+            if (objectobj.style.display = "none") {
+                objectobj.style.display = "";
+                dtObj.setAttribute("class", "head2");
+                $(dtObj).parent().parent().find("dt").not(dtObj).attr("class", "head1");//折叠
+                $(objectobj).parent().parent().find("ul").not(objectobj).attr("display", "none");
+            }
+            else {
+                objectobj.style.display = "none";
+                dtObj.setAttribute("class", "head1");
+            }           
+        }
+        //控制菜单模块的显示和隐藏
+        function ShowDivMenu(divId) {
+            $("#" + divId).css("visibility", "visible");
+            $("#" + divId).siblings("div").css("visibility", "hidden");
+        }
+        $(function () {
+            $(".box_n li a").click(function () {
+                $(".boc_n li a").removeClass("nav_sub");
+                $(this).addClass("nav_sub");
+            })
+        })
+        function goNewPage(url,name) {
+            self.parent.frames["mainFrame"].addTab(url, name);
+        }
+    </script>
 </head>
 <body>
     <div class="leftbar" id="divOrder">

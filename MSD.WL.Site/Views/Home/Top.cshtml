@@ -19,15 +19,24 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script>
         function showLeftList(divID) {
-
+            self.parent.frames["leftFrame"].ShowDivMenu(divID);
         }
+
+        $(function () {
+            $(".nav_list ul li a").click(function () {
+                $(".nav_list ul li a").css("background-color", "");
+                $(".nav_list ul li a").css("color", "#ceebff");
+                $(this).css("background-color", "#66d354")
+                $(this).css("color","white")
+            })
+        })
     </script>
 </head>
 <body>
     <div class="index_header">
-        <div class="index_headertop">
+        <div class="index_headertop">            
             <div class="index_logo">
-                <a href="#"><img src="/images/index_logo.png" alt="Logo"></a>
+                <a href="#"><img src="~/Images/index_logo.png" alt="Logo"></a>
             </div>
             <div class="lgstatus">
                 欢迎您,@ViewBag.UserName<i><em>20</em></i>可用余额：<span>￥@ViewBag.AvailableBalance</span>&nbsp;&nbsp;&nbsp;
@@ -39,7 +48,7 @@
             <div class="nav_list">
                 <ul>
                     <li>
-                        <a href="#">业务管理</a>
+                        <a href="#" onclick="showLeftList('divOrder')">业务管理</a>
                         <div class="nav_out" style="display:none;">
                             <i></i>
                             <p><a href="#">订单管理</a></p>
@@ -48,7 +57,7 @@
                         </div>
                     </li>
                     <li class="slctd">
-                        <a href="#">财务管理</a>
+                        <a href="#" onclick="showLeftList('divFinancial')">财务管理</a>
                         <div class="nav_out" style="display:none">
                             <i></i>
                             <p><a href="#">财务流水</a></p>
@@ -59,7 +68,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">系统管理</a>
+                        <a href="#" onclick="showLeftList('divSysManage')">系统管理</a>
                         <div class="nav_out">
                             <i></i>
                             <p><a href="#">基本信息管理</a></p>
